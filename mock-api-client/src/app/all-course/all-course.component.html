@@ -1,0 +1,25 @@
+<section class='row mt-5 d-flex justify-content-center'>
+  <section class='col-sm-7'>
+    <table class="table text-center table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Course Code</th>
+        <th>Course Description</th>
+        <th>Course Fee</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courses">
+        <td>{{course.id}}</td>
+        <td>{{course.description}}</td>
+        <td>{{course.fee}}</td>
+        <th><div class='d-flex justify-content-around'>
+          <button [routerLink]="['/course/edit']" class='btn btn-primary'>Edit</button>
+          <button [routerLink]="['/course/delete']" class='btn btn-danger'>Delete</button>
+        </div></th>
+      </tr>
+    </tbody>
+  </table>
+  </section>
+</section>

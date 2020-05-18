@@ -1,0 +1,12 @@
+<section class='mt-5'>
+  <section class='row'>
+    <nav class='navbar navbar-expand-lg navbar-dark bg-primary col-sm-8 offset-sm-2'>
+      <ul class="navbar-nav col-sm-12 text-center">
+        <li [ngClass]="{'active': tab === 'courses'}" class='nav-item col-sm-6'  (click) = "tabChange('courses')"><a [routerLink]="['/course/']" class="nav-link">COURSES</a></li>
+        <li [ngClass]="{'active': tab === 'addcourse'}" class="nav-item col-sm-6" (click) = "tabChange('addcoursegit')"><a href="#" class="nav-link">ADD COURSE</a></li>
+      </ul>
+    </nav>
+  </section>
+  <router-outlet></router-outlet>
+</section>
+
