@@ -11,8 +11,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AllCourseComponent implements OnInit {
 
   courses: Course[];
-  constructor(private courseService: CourseService) {
-    this.courseService.getCourse().subscribe(
+  constructor(private courseService: CourseService,
+              private router: Router) {
+    this.courseService.getCourses().subscribe(
       (courses) => {
         this.courses = courses;
       },
@@ -23,6 +24,17 @@ export class AllCourseComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  delete(course: Course) {
+    this.courseService.delete(course.id).subscribe(
+      (result) => {
+        this.courses.splice(this.courses.indexOf(course), 1);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

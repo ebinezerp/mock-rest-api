@@ -8,15 +8,10 @@ import { Router } from '@angular/router';
 })
 export class CourseComponent implements OnInit {
 
-  tab = 'courses';
-
   constructor(private router: Router) {
+    this.router.navigate(['/course/all']);
   }
 
   ngOnInit() {
-  }
-
-  tabChange(tabname: string) {
-    this.tab = tabname;
   }
 }

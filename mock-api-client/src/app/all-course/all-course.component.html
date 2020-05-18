@@ -15,8 +15,8 @@
         <td>{{course.description}}</td>
         <td>{{course.fee}}</td>
         <th><div class='d-flex justify-content-around'>
-          <button [routerLink]="['/course/edit']" class='btn btn-primary'>Edit</button>
-          <button [routerLink]="['/course/delete']" class='btn btn-danger'>Delete</button>
+          <button [routerLink]="['/course/edit/'+101]" class='btn btn-primary'>Edit</button>
+          <button (click)='delete(course)' class='btn btn-danger'>Delete</button>
         </div></th>
       </tr>
     </tbody>

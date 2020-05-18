@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   tab = 'course';
 
   constructor(private router: Router) {
+    this.router.navigate(['/course']);
   }
   ngOnInit(): void {
   }
